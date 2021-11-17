@@ -1,0 +1,18 @@
+.link {
+	color: #790886;
+	line-height: 1.2;
+	border-bottom: 1.5px solid currentColor;
+	transition: all 0.3s;
+
+	&:hover {
+		color: $color-primary;
+	}
+}
+
+.text__light {
+	opacity: 0.7;
+}
+
+.text__secondary {
+	color: $color-secondary;
+}

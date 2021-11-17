@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+}
+::selection {
+	background: $color-text;
+	color: #fff;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	@media only screen and (max-width: $laptop-land) {
+		font-size: 55%;
+	}
+}
+a:hover {
+	text-decoration: none;
+}
+
+body {
+	overflow-x: hidden;
+	font-size: 2rem;
+	color: $color-text;
+	line-height: 1.4;
+	font-family: $font-primary;
+}
+
+.container {
+	// width: 90%;
+	max-width: 1300px;
+}
+.btn__box {
+	display: flex;
+	align-items: center;
+	.btn {
+		&:not(:last-child) {
+			margin-right: 3rem;
+		}
+	}
+}
