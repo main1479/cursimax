@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- Font-Awesome  -->
+		<script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+
+		<!-- FOnts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="auth signup">
+		<header class="header mt-10">
+			<nav class="nav">
+				<div class="container nav__container">
+					<a href="#" class="logo">
+						<img src="./img/logo.png" alt="" class="img-fluid" />
+					</a>
+					<ul class="nav__menu">
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Home</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Courses</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Contact</a>
+						</li>
+						<li class="nav__menu-item d-lg-none d-block">
+							<div class="btn__box">
+								<a href="#" class="btn btn__outlined">Login</a>
+								<a href="#" class="btn btn__outlined">register</a>
+							</div>
+						</li>
+					</ul>
+					<div class="btn__box d-lg-flex d-none">
+						<a href="#" class="btn btn__outlined d-lg-block d-none">Login</a>
+						<a href="#" class="btn btn__outlined">register</a>
+					</div>
+					<button class="hamburger d-lg-none d-block menu__trigger hamburger--spring" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<!-- ============================================== -->
+		<!-- ============ Signup Form SECTION ============= -->
+		<!-- ============================================== -->
+		<section class="signup-section mt-10 pt-3">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 px-5 text-center mb-4 d-lg-block d-none">
+						<img src="./img/signup.png" alt="signup" class="img-fluid" />
+					</div>
+					<div class="col-lg-4 mx-auto mb-4">
+						<h1 class="heading mb-3">Create your account</h1>
+						<form action="#" class="form">
+							<div class="input__box">
+								<input type="text" name="name" placeholder="Name" />
+							</div>
+							<div class="input__box">
+								<input type="email" name="email" placeholder="Email" />
+							</div>
+							<div class="input__box">
+								<input type="password" name="password" placeholder="Password" />
+							</div>
+							<div class="input__box">
+								<input type="password" name="password" placeholder="Confirm Password" />
+							</div>
+							<button type="submit" class="btn btn__purple btn__icon w-full mt-1">
+								Sign up to your account
+								<img src="./img/arrow.png" alt="arrow icon" />
+							</button>
+						</form>
+						<p class="p__text my-5 text__light text__light-lighter text__medium">
+							Or sign up with your social account
+						</p>
+						<div class="btn__box">
+							<button type="submit" class="btn btn__icon w-full bg-light">
+								Sign up with google
+								<img src="./img/google-icon.png" alt="google icon" />
+							</button>
+							<button type="submit" class="btn btn__icon bg-light">
+								.
+								<img src="./img/facebook-icon.png" alt="facebook icon" />
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="./img/el-fire.png" alt="element" class="img-fluid el-fire" />
+			<img src="./img/el-sq.png" alt="element" class="img-fluid el-sq" />
+			<img src="./img/el-poly.png" alt="element" class="img-fluid el-poly" />
+			<img src="./img/el-choco.png" alt="element" class="img-fluid el-choco" />
+		</section>
+
+		<!-- Main js file -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

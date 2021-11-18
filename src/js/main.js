@@ -8,14 +8,17 @@ const stickyNav = (entries) => {
 	else nav.classList.remove('sticky');
 };
 const header = document.querySelector('h1.heading');
-const navHeight = nav.getBoundingClientRect().height;
-const headerObserver = new IntersectionObserver(stickyNav, {
-	root: null,
-	threshold: 0,
-	rootMargin: `-${navHeight}px`,
-});
-headerObserver.observe(header);
-
+function stickyNavInit() {
+	if (!header) return;
+	const navHeight = nav.getBoundingClientRect().height;
+	const headerObserver = new IntersectionObserver(stickyNav, {
+		root: null,
+		threshold: 0,
+		rootMargin: `-${navHeight}px`,
+	});
+	headerObserver.observe(header);
+}
+stickyNavInit();
 // =======================================
 // Mobile Menu
 // =======================================

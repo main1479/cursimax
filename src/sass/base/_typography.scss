@@ -11,8 +11,16 @@
 
 .text__light {
 	opacity: 0.7;
+
+	&-lighter {
+		opacity: 0.4;
+	}
 }
 
 .text__secondary {
 	color: $color-secondary;
+}
+
+.text__medium {
+	font-weight: 500;
 }

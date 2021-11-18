@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- Font-Awesome  -->
+		<script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+
+		<!-- FOnts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="auth profile">
+		<header class="header mt-10">
+			<nav class="nav">
+				<div class="container nav__container">
+					<a href="#" class="logo">
+						<img src="./img/logo.png" alt="" class="img-fluid" />
+					</a>
+					<ul class="nav__menu">
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Home</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Courses</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Contact</a>
+						</li>
+						<li class="nav__menu-item d-lg-none d-block">
+							<div class="btn__box">
+								<a href="#" class="btn btn__outlined">Login</a>
+								<a href="#" class="btn btn__outlined">register</a>
+							</div>
+						</li>
+					</ul>
+					<div class="btn__box d-lg-flex d-none">
+						<a href="#" class="btn btn__outlined d-lg-block d-none">Login</a>
+						<a href="#" class="btn btn__outlined">register</a>
+					</div>
+					<button class="hamburger d-lg-none d-block menu__trigger hamburger--spring" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<!-- ============================================== -->
+		<!-- ============ Signin Form SECTION ============= -->
+		<!-- ============================================== -->
+		<section class="profile-section mt-10 pt-3">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-5 col-sm-6 px-5">
+						<div class="profile__image text-center">
+							<img src="./img/my-profile.png" alt="profile" />
+						</div>
+						<div class="upload__image">
+							<label for="file" class="btn btn__upload">
+								<img src="./img/camera.png" alt="upload" />
+							</label>
+							<input type="file" name="image" id="file" hidden />
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-6">
+						<div class="d-flex align-items-center justify-content-between mb-2">
+							<h1 class="heading name">John Doe</h1>
+							<button class="btn btn__purple">Edit</button>
+						</div>
+
+						<form action="#" class="edit__form">
+							<div class="input__box">
+								<label for="about">About Me</label>
+								<input type="text" name="about" />
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="input__box">
+										<label for="username">Username</label>
+										<input type="text" name="username" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input__box">
+										<label for="email">Email</label>
+										<input type="email" name="email" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input__box">
+										<label for="city">City</label>
+										<input type="text" name="city" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input__box">
+										<label for="birthDate">Date of Birth</label>
+										<input type="text" name="birthDate" />
+									</div>
+								</div>
+								<div class="col-md-6 mb-2">
+									<button type="submit" class="btn btn__purple btn__icon w-full">
+										Change Password
+									</button>
+								</div>
+							</div>
+						</form>
+						<div class="row">
+							<div class="col-md-6 mb-2">
+								<button class="btn btn__connect w-full">Change Password</button>
+							</div>
+							<div class="col-md-6 mb-2">
+								<button class="btn btn__connect w-full">
+									<img src="./img/facebook-icon.png" alt="facebook" />
+									Connect Facebook
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="./img/el-poly.png" alt="element" class="img-fluid el-poly" />
+			<img src="./img/el-choco.png" alt="element" class="img-fluid el-choco" />
+		</section>
+
+		<!-- Main js file -->
+		<script src="js/main.js"></script>
+
+		<script>
+			const fileInput = document.querySelector('#file');
+			const img = document.querySelector('.profile__image img');
+			let imgUrl;
+			fileInput.addEventListener('change', (e) => {
+				e.preventDefault();
+				const reader = new FileReader();
+				if (e.target.files[0]) {
+					reader.readAsDataURL(e.target.files[0]);
+				}
+				reader.onload = (readerEvent) => {
+					imgUrl = readerEvent.target.result;
+					img.src = imgUrl;
+				};
+			});
+		</script>
+	</body>
+</html>

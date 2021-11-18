@@ -19,6 +19,7 @@
 @import './components/buttons';
 @import './components/burger';
 @import './components/navbar';
+@import './components/form';
 @import './components/footer';
 
 // ============================================
@@ -27,4 +28,5 @@
 @import './pages/home/';
 @import './pages/about/';
 @import './pages/search/';
+@import './pages/auth/'; // ALll Auth pages
 @import './pages/landing/';
