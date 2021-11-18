@@ -6,12 +6,14 @@
 	"scripts": {
 		"bootstrap": "sass node_modules/bootstrap/scss/bootstrap.scss src/css/bootstrap.css",
 		"css": "sass src/sass/main.scss src/css/style.css -w",
-		"start": "npm-run-all bootstrap css"
+		"mixitup": "concat -o src/js/mixitup.min.js node_modules/mixitup/dist/mixitup.min.js",
+		"start": "npm-run-all bootstrap css mixitup"
 	},
 	"author": "Mainul Islam",
 	"license": "ISC",
 	"dependencies": {
 		"bootstrap": "^4.5.2",
+		"mixitup": "^3.3.1",
 		"sass": "^1.43.4"
 	},
 	"devDependencies": {

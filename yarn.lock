@@ -403,6 +403,11 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+mixitup@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/mixitup/-/mixitup-3.3.1.tgz#6ca9b6fc3a202d237b8f3ce9c02f48ac976881f6"
+  integrity sha512-5WlMzRNSAU5R1N/NlmOvmYxcZVgib3do5I0H+LO6e0ArI7GlNLMPoAANK7XOemuwJFZcJHIGvWDIPMK1jnWEqA==
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
