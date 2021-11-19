@@ -971,6 +971,19 @@ table {
 .btn__upload:hover {
   box-shadow: 0 0 50px rgba(34, 34, 34, 0.1);
 }
+.btn__connect {
+  padding: 1.2rem 2rem;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  border-radius: 10px;
+  font-size: 1.6rem;
+}
+.btn__connect img,
+.btn__connect svg {
+  height: 2rem;
+}
+.btn__connect img.user {
+  height: 2.5rem;
+}
 
 .hamburger {
   padding: 5px;
@@ -1785,6 +1798,10 @@ body.auth .el-choco {
   bottom: 6rem;
   left: 50%;
 }
+body.auth.profile .btn__purple {
+  padding: 1rem 3rem;
+  font-weight: 500;
+}
 body.auth.profile section.profile-section .profile__image {
   max-width: 500px;
   max-height: 500px;
@@ -1793,7 +1810,7 @@ body.auth.profile section.profile-section .profile__image {
 body.auth.profile section.profile-section .profile__image img {
   width: 100%;
   height: 100%;
-  min-height: 400px;
+  min-height: 300px;
   object-fit: cover;
   border-radius: 24px;
 }
@@ -1801,6 +1818,28 @@ body.auth.profile section.profile-section .upload__image {
   display: flex;
   justify-content: center;
   transform: translateY(-50%);
+}
+body.auth.profile section.profile-section .edit__form .input__box {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background: #fff;
+}
+body.auth.profile section.profile-section .edit__form .input__box label {
+  font-size: 16px;
+  opacity: 0.4;
+}
+body.auth.profile section.profile-section .edit__form .input__box textarea,
+body.auth.profile section.profile-section .edit__form .input__box input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+}
+body.auth.profile section.profile-section .edit__form .input__box textarea {
+  min-height: 10rem;
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

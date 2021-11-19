@@ -155,4 +155,20 @@
 			box-shadow: 0 0 50px rgba($color-text, 0.1);
 		}
 	}
+
+	&__connect {
+		padding: 1.2rem 2rem;
+		border: 1px solid rgba($color-text, 0.1);
+		border-radius: 10px;
+		font-size: 1.6rem;
+		img,
+		svg {
+			height: 2rem;
+		}
+		img {
+			&.user {
+				height: 2.5rem;
+			}
+		}
+	}
 }

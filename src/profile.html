@@ -58,7 +58,7 @@
 		<section class="profile-section mt-10 pt-3">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-lg-5 col-sm-6 px-5">
+					<div class="col-xl-5 col-lg-6 px-5">
 						<div class="profile__image text-center">
 							<img src="./img/my-profile.png" alt="profile" />
 						</div>
@@ -69,7 +69,7 @@
 							<input type="file" name="image" id="file" hidden />
 						</div>
 					</div>
-					<div class="col-lg-7 col-md-6">
+					<div class="col-xl-7 col-lg-8">
 						<div class="d-flex align-items-center justify-content-between mb-2">
 							<h1 class="heading name">John Doe</h1>
 							<button class="btn btn__purple">Edit</button>
@@ -78,31 +78,32 @@
 						<form action="#" class="edit__form">
 							<div class="input__box">
 								<label for="about">About Me</label>
-								<input type="text" name="about" />
+								<!-- <input type="text" name="about" id="about" /> -->
+								<textarea name="about" id="about"></textarea>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="input__box">
 										<label for="username">Username</label>
-										<input type="text" name="username" />
+										<input type="text" name="username" id="username" />
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input__box">
 										<label for="email">Email</label>
-										<input type="email" name="email" />
+										<input type="email" name="email" id="email" />
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input__box">
 										<label for="city">City</label>
-										<input type="text" name="city" />
+										<input type="text" name="city" id="city" />
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="input__box">
 										<label for="birthDate">Date of Birth</label>
-										<input type="text" name="birthDate" />
+										<input type="text" name="birthDate" id="birthDate" />
 									</div>
 								</div>
 								<div class="col-md-6 mb-2">
@@ -114,12 +115,43 @@
 						</form>
 						<div class="row">
 							<div class="col-md-6 mb-2">
-								<button class="btn btn__connect w-full">Change Password</button>
+								<button class="btn btn__connect w-full">
+									<div class="row justify-content-between">
+										<div class="col-6 d-flex align-items-center">
+											<img src="./img/google-icon.png" alt="google icon" />
+											<span class="text-success ml-3">Connected</span>
+										</div>
+										<div class="col-6 d-flex align-items-center">
+											<img
+												src="./img/user.png"
+												width="25"
+												height="25"
+												class="rounded-circle user mr-3"
+												alt="username"
+											/>
+											<span>John Doe</span>
+										</div>
+									</div>
+								</button>
 							</div>
 							<div class="col-md-6 mb-2">
 								<button class="btn btn__connect w-full">
-									<img src="./img/facebook-icon.png" alt="facebook" />
-									Connect Facebook
+									<div class="row justify-content-between">
+										<div class="d-flex align-items-center px-3">
+											<img src="./img/facebook-icon.png" alt="facebook icon" />
+											<span class="ml-3">Connect Facebook</span>
+										</div>
+										<!-- <div class="col-6 d-flex align-items-center">
+											<img
+												src="./img/user.png"
+												width="25"
+												height="25"
+												class="rounded-circle user mr-3"
+												alt="username"
+											/>
+											<span>John Doe</span>
+										</div> -->
+									</div>
 								</button>
 							</div>
 						</div>

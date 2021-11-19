@@ -7,7 +7,7 @@
 		"bootstrap": "sass node_modules/bootstrap/scss/bootstrap.scss src/css/bootstrap.css",
 		"css": "sass src/sass/main.scss src/css/style.css -w",
 		"mixitup": "concat -o src/js/mixitup.min.js node_modules/mixitup/dist/mixitup.min.js",
-		"start": "npm-run-all bootstrap css mixitup"
+		"start": "npm-run-all mixitup bootstrap css "
 	},
 	"author": "Mainul Islam",
 	"license": "ISC",
