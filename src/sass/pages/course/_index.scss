@@ -1,0 +1,122 @@
+body.learn-course {
+	// ===================================
+	// Global typography for course page
+	// ===================================
+
+	h3.heading {
+		font-size: clamp(1.8rem, 1.8vw, 2rem);
+		font-weight: 600;
+		color: $color-primary;
+	}
+	p.p__text {
+		font-size: 1.5rem;
+	}
+
+	// ===================================
+	// Course content section
+	// ===================================
+	.tab-container {
+		padding: 2rem 0;
+		padding-bottom: 5rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		position: relative;
+		.operations__tab-container {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			flex-wrap: wrap;
+		}
+		.operations__content {
+			margin-top: 2rem;
+			width: 100%;
+			transition: all 0.3s;
+			position: absolute;
+			top: 7rem;
+			left: 0;
+
+			opacity: 0;
+			visibility: hidden;
+
+			&--active {
+				opacity: 1;
+				visibility: visible;
+				position: relative;
+				top: 0;
+			}
+
+			&.chat__content {
+				padding: 2rem;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+
+				.chat__message {
+					display: flex;
+					align-items: flex-start;
+					gap: 1rem;
+					padding: 1rem 0;
+					padding-bottom: 2rem;
+					margin-bottom: 1rem;
+
+					&:not(:last-child) {
+						border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+					}
+					.chat {
+						&__img {
+							border-radius: 50%;
+							width: 3rem;
+							height: 3rem;
+
+							img {
+								width: 3rem;
+								height: 3rem;
+								object-fit: cover;
+							}
+						}
+						&__time {
+							white-space: nowrap;
+							align-self: flex-end;
+							color: #7b7b7b;
+						}
+						&__text {
+							color: #7b7b7b;
+						}
+					}
+				}
+
+				.chat__form {
+					width: 100%;
+
+					.input__box {
+						position: relative;
+						padding: 0.8rem 2rem;
+						display: flex;
+						justify-content: space-between;
+						background: #f9f9f9;
+						border-radius: 100px;
+						input {
+							font-size: 16px;
+							border: none;
+							background: #f9f9f9;
+							width: 90%;
+						}
+
+						.btn {
+							padding: 0;
+							svg {
+								width: 2rem;
+								height: 2rem;
+								fill: $color-text;
+							}
+
+							&:hover {
+								svg {
+									fill: $color-secondary;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -10,7 +10,8 @@
 	}
 
 	&__outlined {
-		padding: 1rem 3.2rem;
+		padding: 1rem 2.2rem;
+		font-weight: 600;
 		position: relative;
 		background: #fff;
 		border-radius: 10px;
@@ -76,6 +77,7 @@
 			color: #fff;
 		}
 	}
+	&.operations__tab,
 	&__purple {
 		padding: 1.5rem 5.5rem;
 		background: $color-primary;
@@ -89,6 +91,23 @@
 		&:hover {
 			background: $color-secondary;
 			box-shadow: 0px 15px 35px rgba($color-secondary, 0.5);
+			color: #fff;
+		}
+	}
+
+	&.operations__tab {
+		padding: 1rem 2rem;
+		font-size: 1.5rem;
+		font-weight: normal;
+		background: none;
+		box-shadow: none;
+		color: $color-text;
+
+		&:hover,
+		&.active {
+			background: linear-gradient(0deg, #4d008c, #4d008c);
+			box-shadow: 0px 15px 13px rgba(100, 120, 248, 0.14);
+			border-radius: 15px;
 			color: #fff;
 		}
 	}
