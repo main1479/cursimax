@@ -19,14 +19,14 @@
 @import './components/buttons';
 @import './components/burger';
 @import './components/navbar';
-@import './components/form';
-@import './components/footer';
 
 // ============================================
-// Pages
+// Layouts
 // ============================================
-@import './pages/home/';
-@import './pages/about/';
-@import './pages/search/';
-@import './pages/auth/'; // ALll Auth pages
-@import './pages/course/';
+@import './layouts/header';
+@import './layouts/cta';
+@import './layouts/included';
+@import './layouts/instructors';
+@import './layouts/course-content';
+@import './layouts/certificate';
+@import './layouts/footer';

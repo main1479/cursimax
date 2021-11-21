@@ -8,6 +8,42 @@ body.learn-course {
 		font-weight: 600;
 		color: $color-primary;
 	}
+	h4.heading {
+		font-size: clamp(15px, 1.5vw, 1.8rem);
+		font-weight: 600;
+		color: $color-primary;
+
+		&.dropdown__target {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1rem 0;
+			cursor: pointer;
+			img,
+			svg {
+				width: 10px;
+				height: 10px;
+				object-fit: contain;
+				transition: all 0.2s ease;
+			}
+
+			&[aria-expanded='false'] {
+				img,
+				svg {
+					width: 10px;
+					height: 10px;
+					object-fit: contain;
+					transition: all 0.2s ease;
+				}
+			}
+			&[aria-expanded='true'] {
+				img,
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
 	p.p__text {
 		font-size: 1.5rem;
 	}
@@ -59,6 +95,10 @@ body.learn-course {
 
 					&:not(:last-child) {
 						border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+					}
+					&:last-of-type {
+						border-bottom: none !important;
+						margin-bottom: 2rem;
 					}
 					.chat {
 						&__img {
@@ -116,6 +156,179 @@ body.learn-course {
 						}
 					}
 				}
+			}
+		}
+	}
+
+	// ===================================
+	// Lecture list section
+	// ===================================
+
+	.lectures {
+		height: 720px;
+		padding-right: 2rem;
+		overflow-y: scroll;
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #e7e7e7;
+			border-radius: 100px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: #cacaca;
+		}
+
+		.class__list {
+			margin-bottom: 3rem;
+			.class__card {
+				margin-top: 10px;
+				display: flex;
+				align-items: center;
+				padding: 1.5rem;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 7px;
+				gap: 1rem;
+				cursor: pointer;
+
+				img {
+					width: 9rem;
+					height: 6rem;
+					border-radius: 7px;
+					object-fit: cover;
+				}
+			}
+
+			.dropdown {
+				padding: 1.5rem;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 7px;
+
+				h5 {
+					font-size: 1.5rem;
+					color: #7b7b7b;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					&.active {
+						font-weight: 600;
+						color: $color-primary;
+					}
+
+					&.dropdown__target {
+						padding: 2rem 0;
+						// margin-bottom: 10px;
+						cursor: pointer;
+						&[aria-expanded='false'] {
+							&::after {
+								content: '+';
+							}
+						}
+						&[aria-expanded='true'] {
+							&::after {
+								content: '-';
+							}
+						}
+
+						&:not(:last-child) {
+							border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+						}
+						&:last-of-type {
+							border-bottom: none !important;
+						}
+					}
+				}
+				p {
+					color: #7b7b7b;
+				}
+
+				&__body {
+					// max-height: 0;
+					// overflow: hidden;
+					// transition: max-height 0.2s ease;
+
+					.class__card {
+						border: none;
+						display: flex;
+						align-items: center;
+						padding-top: 0 !important;
+						padding-bottom: 0 !important;
+						&-img {
+							width: 8rem;
+							height: 5.5rem;
+							position: relative;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							&--banner {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								border-radius: 7px;
+							}
+
+							&--play {
+								position: absolute;
+								width: 20px;
+								height: 20px;
+								opacity: 0;
+								visibility: hidden;
+							}
+						}
+
+						&.is-playing {
+							.class__card-img {
+								&--banner {
+									filter: grayscale(50);
+								}
+								&--play {
+									opacity: 1;
+									visibility: visible;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// ===================================
+	// Quiz Page
+	// ===================================
+	.quiz__box {
+		padding: 3rem clamp(2rem, 2vw, 4rem);
+		border: 1.5px solid rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+
+		.option__list {
+			margin-bottom: 7rem;
+			&-item {
+				margin-bottom: 2rem;
+
+				.option__label {
+					padding: 1.4rem 2rem;
+					border-radius: 7px;
+					background: #ebf0ff;
+					min-width: 23rem;
+					font-size: 15px;
+				}
+
+				input:checked + .option__label {
+					background: #060054;
+					color: #fff;
+				}
+			}
+		}
+
+		.buttons {
+			gap: 2rem;
+			.btn {
+				min-width: 15rem;
+				border-radius: 15px;
 			}
 		}
 	}

@@ -6,13 +6,17 @@
 	"scripts": {
 		"bootstrap": "sass node_modules/bootstrap/scss/bootstrap.scss src/css/bootstrap.css",
 		"css": "sass src/sass/main.scss src/css/style.css -w",
+		"landing-css": "sass landing/sass/main.scss landing/css/style.css -w",
 		"mixitup": "concat -o src/js/mixitup.min.js node_modules/mixitup/dist/mixitup.min.js",
-		"start": "npm-run-all mixitup bootstrap css "
+		"bootstrap-js": "concat -o src/js/bootstrap.js node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+		"jquery": "concat -o src/js/jquery.js node_modules/jquery/dist/jquery.min.js",
+		"start": "npm-run-all mixitup bootstrap-js jquery bootstrap css landing-css"
 	},
 	"author": "Mainul Islam",
 	"license": "ISC",
 	"dependencies": {
 		"bootstrap": "^4.5.2",
+		"jquery": "^3.6.0",
 		"mixitup": "^3.3.1",
 		"sass": "^1.43.4"
 	},
