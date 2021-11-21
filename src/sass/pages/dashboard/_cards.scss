@@ -1,0 +1,108 @@
+.stats__card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 15rem;
+	border-radius: 10px;
+	flex-direction: column;
+	gap: 1rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+	h2.heading {
+		font-size: clamp(2.5rem, 2.5vw, 3.5rem);
+		font-weight: bold;
+		color: $color-primary;
+	}
+	p.p__text {
+		font-size: 1.7rem;
+	}
+}
+
+.profit__card,
+.qna__card,
+.exam__card,
+.rating__card,
+.student__card,
+.course__card {
+	display: flex;
+	align-items: center;
+	padding: 1.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 7px;
+	gap: 1rem;
+	cursor: pointer;
+	margin-bottom: 1rem;
+	min-width: 35rem;
+	min-height: 15rem;
+
+	img {
+		width: 9rem;
+		height: 12rem;
+		border-radius: 7px;
+		object-fit: cover;
+	}
+	&-content {
+		// height: 100%;
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		padding: 8px 0;
+	}
+	.rating {
+		margin-top: auto;
+	}
+}
+
+.student__card {
+	align-items: center;
+
+	&-content {
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		padding: 8px 0;
+	}
+	img {
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+	}
+}
+
+.rating__card {
+	display: block;
+}
+
+.exam__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	.btn {
+		align-self: flex-end;
+	}
+}
+
+.qna__card {
+	flex-direction: column;
+	align-items: flex-start;
+
+	div {
+		// flex: 0 0 100%;
+		align-self: stretch;
+	}
+}
+.profit__card {
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2.3rem 1.8rem;
+
+	p.earn {
+		align-self: stretch;
+		strong {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+}

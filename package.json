@@ -10,7 +10,7 @@
 		"mixitup": "concat -o src/js/mixitup.min.js node_modules/mixitup/dist/mixitup.min.js",
 		"bootstrap-js": "concat -o src/js/bootstrap.js node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
 		"jquery": "concat -o src/js/jquery.js node_modules/jquery/dist/jquery.min.js",
-		"start": "npm-run-all mixitup bootstrap-js jquery bootstrap css landing-css"
+		"start": "npm-run-all mixitup bootstrap-js jquery bootstrap css"
 	},
 	"author": "Mainul Islam",
 	"license": "ISC",

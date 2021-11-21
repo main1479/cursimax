@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- Font-Awesome  -->
+		<script src="https://kit.fontawesome.com/bdc84e071b.js" crossorigin="anonymous"></script>
+
+		<!-- FOnts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="dashboard">
+		<header class="header">
+			<nav class="nav">
+				<div class="container nav__container">
+					<a href="#" class="logo">
+						<img src="./img/logo.png" alt="" class="img-fluid" />
+					</a>
+					<ul class="nav__menu">
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Home</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Courses</a>
+						</li>
+						<li class="nav__menu-item">
+							<a href="#" class="nav__menu-link menu__trigger">Contact</a>
+						</li>
+						<li class="nav__menu-item d-lg-none d-block">
+							<div class="btn__box">
+								<a href="#" class="btn btn__outlined">Panel</a>
+							</div>
+						</li>
+					</ul>
+					<div class="btn__box d-lg-flex d-none">
+						<a href="#" class="btn btn__outlined">Panel</a>
+					</div>
+					<button class="hamburger d-lg-none d-block menu__trigger hamburger--spring" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</header>
+		<!-- ============================================== -->
+		<!-- ============== Sidebar Section =============== -->
+		<!-- ============================================== -->
+		<aside class="sidebar">
+			<ul class="sidebar__menu">
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link active">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-dashboard"></use>
+						</svg>
+						Dashboard
+					</a>
+				</li>
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-courses"></use>
+						</svg>
+						Courses
+					</a>
+				</li>
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-profits"></use>
+						</svg>
+						Profits
+					</a>
+				</li>
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-qna"></use>
+						</svg>
+						QNA
+					</a>
+				</li>
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-reviews"></use>
+						</svg>
+						Reviews
+					</a>
+				</li>
+				<li class="sidebar__menu-item">
+					<a href="#" class="sidebar__menu-link">
+						<svg>
+							<use xlink:href="./img/icons.svg#icon-exams"></use>
+						</svg>
+						Pending Exams
+					</a>
+				</li>
+			</ul>
+		</aside>
+
+		<section class="stats">
+			<div class="container-fluid">
+				<div class="row courses__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">5</h2>
+							<p class="p__text text__light">Total Courses</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid">
+							<div class="course__card">
+								<img src="./img/course-db.png" alt="next class title" />
+								<div class="course__card-content">
+									<h4 class="heading">Introduction</h4>
+									<p class="p__text mb-auto">is simply dummy text ...</p>
+									<div class="rating">
+										5.0
+										<svg>
+											<use xlink:href="./img/icons.svg#icon-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="course__card">
+								<img src="./img/course-db.png" alt="next class title" />
+								<div class="course__card-content">
+									<h4 class="heading">Introduction</h4>
+									<p class="p__text mb-auto">is simply dummy text ...</p>
+									<div class="rating">
+										5.0
+										<svg>
+											<use xlink:href="./img/icons.svg#icon-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<div class="course__card">
+								<img src="./img/course-db.png" alt="next class title" />
+								<div class="course__card-content">
+									<h4 class="heading">Introduction</h4>
+									<p class="p__text mb-auto">is simply dummy text ...</p>
+									<div class="rating">
+										5.0
+										<svg>
+											<use xlink:href="./img/icons.svg#icon-star"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row students__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">702</h2>
+							<p class="p__text text__light">Total Students</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid">
+							<div class="student__card">
+								<img src="./img/student.png" alt="next class title" />
+								<div class="student__card-content">
+									<h4 class="heading mb-1">John Doe</h4>
+									<p class="p__text text__light">Course</p>
+									<p class="p__text mb-auto">Digital Leardership</p>
+								</div>
+							</div>
+							<div class="student__card">
+								<img src="./img/student2.png" alt="next class title" />
+								<div class="student__card-content">
+									<h4 class="heading mb-1">John Doe</h4>
+									<p class="p__text text__light">Course</p>
+									<p class="p__text mb-auto">Digital Leardership</p>
+								</div>
+							</div>
+
+							<div class="student__card">
+								<img src="./img/student3.png" alt="next class title" />
+								<div class="student__card-content">
+									<h4 class="heading mb-1">John Doe</h4>
+									<p class="p__text text__light">Course</p>
+									<p class="p__text mb-auto">Digital Leardership</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ratings__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">4.8</h2>
+							<p class="p__text text__light">Rating</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid">
+							<div class="rating__card">
+								<div class="d-flex align-items-center justify-content-between">
+									<h4 class="heading">John Doe</h4>
+									<button class="btn btn__primary btn__primary--small">Reply</button>
+								</div>
+								<div class="rating my-2">
+									5.0
+									<svg>
+										<use xlink:href="./img/icons.svg#icon-star"></use>
+									</svg>
+								</div>
+
+								<p class="p__text mb-auto">
+									Very nice course. I learned alot. I recommend it to everyone.
+								</p>
+							</div>
+							<div class="rating__card">
+								<div class="d-flex align-items-center justify-content-between">
+									<h4 class="heading">John Doe</h4>
+									<button class="btn btn__primary btn__primary--small">Reply</button>
+								</div>
+								<div class="rating my-2">
+									5.0
+									<svg>
+										<use xlink:href="./img/icons.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="p__text mb-auto">
+									Very nice course. I learned alot. I recommend it to everyone.
+								</p>
+							</div>
+
+							<div class="rating__card">
+								<div class="d-flex align-items-center justify-content-between">
+									<h4 class="heading">John Doe</h4>
+									<button class="btn btn__primary btn__primary--small">Reply</button>
+								</div>
+								<div class="rating my-2">
+									5.0
+									<svg>
+										<use xlink:href="./img/icons.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="p__text mb-auto">
+									Very nice course. I learned alot. I recommend it to everyone.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row exams__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">3</h2>
+							<p class="p__text text__light">Pending Exams</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid">
+							<div class="exam__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> submitted quiz in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<button class="btn btn__primary btn__primary--small">Grade</button>
+							</div>
+							<div class="exam__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> submitted quiz in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<button class="btn btn__primary btn__primary--small">Grade</button>
+							</div>
+
+							<div class="exam__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> submitted quiz in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<button class="btn btn__primary btn__primary--small">Grade</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row qna__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">57</h2>
+							<p class="p__text text__light">Questions from students</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid">
+							<div class="qna__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> asked a question in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="p__text text__light">How do we see the...</p>
+									<button class="btn btn__primary btn__primary--small">Answer</button>
+								</div>
+							</div>
+							<div class="qna__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> asked a question in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="p__text text__light">How do we see the...</p>
+									<button class="btn btn__primary btn__primary--small">Answer</button>
+								</div>
+							</div>
+
+							<div class="qna__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong> asked a question in course
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<div class="d-flex align-items-center justify-content-between">
+									<p class="p__text text__light">How do we see the...</p>
+									<button class="btn btn__primary btn__primary--small">Answer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row profits__row">
+					<div class="col-md-3">
+						<div class="stats__card">
+							<h2 class="heading">$560</h2>
+							<p class="p__text text__light">Profits this week</p>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card__grid mb-3">
+							<div class="profit__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong>
+									<span class="text__light">bought</span>
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<p class="p__text earn text-right">
+									Earned <strong class="text-success">$50</strong>
+								</p>
+							</div>
+							<div class="profit__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong>
+									<span class="text__light">bought</span>
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<p class="p__text earn text-right">
+									Earned <strong class="text-success">$50</strong>
+								</p>
+							</div>
+
+							<div class="profit__card">
+								<p class="p__text mb-auto">
+									<strong class="student__name">John Doe</strong>
+									<span class="text__light">bought</span>
+									<strong class="course__name">Digital Leadership</strong>
+								</p>
+
+								<p class="p__text earn text-right">
+									Earned <strong class="text-success">$50</strong>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Main js file -->
+		<script src="js/main.js"></script>
+		<script></script>
+	</body>
+</html>

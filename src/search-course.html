@@ -13,6 +13,7 @@
 			rel="stylesheet"
 		/>
 		<!-- CSS Files -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
@@ -54,16 +55,39 @@
 			<div class="container-fluid">
 				<div class="row mx-md-n3 align-items-center">
 					<div class="col-lg-5 px-md-3 ml-auto">
-						<h1 class="heading mb-2">
+						<h1
+							class="heading mb-2"
+							data-aos="fade-up"
+							data-aos-delay="300"
+							data-aos-duration="1000"
+						>
 							<span class="text__secondary">Choose the</span> Right Course
 						</h1>
-						<p class="p__text mb-3 ch-38">
+						<p
+							class="p__text mb-3 ch-38"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-duration="1000"
+						>
 							Join our course to get the best preparation and pass the exam without any problem!
 						</p>
-						<a href="#" class="btn btn__purple">View Courses Below</a>
+						<a
+							data-aos="fade-up"
+							data-aos-delay="900"
+							data-aos-duration="1000"
+							href="#"
+							class="btn btn__purple"
+							>View Courses Below</a
+						>
 					</div>
 					<div class="col-lg-6 px-md-3 d-lg-block d-none">
-						<img src="./img/search-header.png" alt="search courses" class="img-fluid header__img" />
+						<img
+							data-aos="fade-right"
+							data-aos-duration="1000"
+							src="./img/search-header.png"
+							alt="search courses"
+							class="img-fluid header__img"
+						/>
 					</div>
 				</div>
 			</div>
@@ -90,7 +114,7 @@
 				</form>
 
 				<div class="course__grid">
-					<div class="course__grid-item business">
+					<div data-aos="fade-up" data-aos-duration="500" class="course__grid-item business">
 						<figure class="course__img">
 							<img src="./img/course1.png" alt="course title" />
 						</figure>
@@ -112,7 +136,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="course__grid-item design">
+					<div
+						data-aos="fade-up"
+						data-aos-delay="300"
+						data-aos-duration="500"
+						class="course__grid-item design"
+					>
 						<figure class="course__img">
 							<img src="./img/course2.png" alt="course title" />
 						</figure>
@@ -134,7 +163,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="course__grid-item development">
+					<div
+						data-aos="fade-up"
+						data-aos-delay="600"
+						data-aos-duration="500"
+						class="course__grid-item development"
+					>
 						<figure class="course__img">
 							<img src="./img/course3.png" alt="course title" />
 						</figure>
@@ -156,7 +190,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="course__grid-item business">
+					<div
+						data-aos="fade-up"
+						data-aos-delay="900"
+						data-aos-duration="500"
+						class="course__grid-item business"
+					>
 						<figure class="course__img">
 							<img src="./img/course1.png" alt="course title" />
 						</figure>
@@ -178,7 +217,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="course__grid-item technology development">
+					<div
+						data-aos="fade-up"
+						data-aos-delay="1200"
+						data-aos-duration="500"
+						class="course__grid-item technology development"
+					>
 						<figure class="course__img">
 							<img src="./img/course2.png" alt="course title" />
 						</figure>
@@ -200,7 +244,12 @@
 							</button>
 						</div>
 					</div>
-					<div class="course__grid-item design">
+					<div
+						data-aos="fade-up"
+						data-aos-delay="1500"
+						data-aos-duration="500"
+						class="course__grid-item design"
+					>
 						<figure class="course__img">
 							<img src="./img/course3.png" alt="course title" />
 						</figure>
@@ -329,10 +378,12 @@
 		</footer>
 
 		<!-- Main js file -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="js/mixitup.min.js"></script>
 		<script src="js/main.js"></script>
 
 		<script>
+			AOS.init();
 			const containerEl = document.querySelector('.course__grid');
 			var mixer = mixitup(containerEl, {
 				selectors: {

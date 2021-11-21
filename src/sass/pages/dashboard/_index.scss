@@ -1,0 +1,68 @@
+@import './cards';
+
+body.dashboard {
+	.nav {
+		position: fixed;
+	}
+	// ==================================
+	// Global typography for this page
+	// ==================================
+	h4.heading {
+		font-size: 1.7rem;
+		font-weight: 600;
+		color: $color-primary;
+	}
+	p.p__text {
+		font-size: 1.5rem;
+	}
+
+	.rating {
+		color: $color-secondary;
+		display: flex;
+		align-items: center;
+		font-size: 1.8rem;
+		line-height: 1;
+
+		svg {
+			width: 1.8rem;
+			height: 1.8rem;
+			fill: currentColor;
+			margin-left: 1rem;
+		}
+	}
+
+	section.stats {
+		margin-top: 13rem;
+		margin-left: 27rem;
+
+		.card__grid {
+			display: flex;
+			gap: 2rem;
+			overflow-x: scroll;
+			margin-bottom: 1rem;
+
+			&::-webkit-scrollbar {
+				width: 5px;
+				height: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: #e7e7e7;
+				border-radius: 100px;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.2s ease;
+			}
+			&::-webkit-scrollbar-thumb:hover {
+				background: #cacaca;
+			}
+
+			&:hover::-webkit-scrollbar-thumb {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

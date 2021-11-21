@@ -10,13 +10,14 @@
 	}
 
 	&__outlined {
-		padding: 1rem 2.2rem;
+		padding: 0.8rem 2.2rem;
 		font-weight: 600;
 		position: relative;
 		background: #fff;
 		border-radius: 10px;
 		background-clip: padding-box; /* !importanté */
 		border: 2.5px solid transparent; /* !importanté */
+		font-size: clamp(1.5rem, 1.5vw, 1.8rem);
 
 		&::after {
 			content: '';
@@ -51,6 +52,11 @@
 
 		&:hover {
 			background: $color-secondary;
+		}
+
+		&--small {
+			padding: 0.8rem 2.2rem;
+			font-size: 1.5rem;
 		}
 	}
 	&__yellow {
