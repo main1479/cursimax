@@ -111,6 +111,11 @@
 		.nav__menu {
 			transform: translateX(0) !important;
 		}
+		.hamburger {
+			position: absolute;
+			top: 3rem;
+			right: 2rem;
+		}
 		.hamburger--spring .hamburger-inner {
 			transition-delay: 0.22s;
 			background-color: transparent !important;

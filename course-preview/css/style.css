@@ -1214,6 +1214,11 @@ table {
 .nav.active .nav__menu {
   transform: translateX(0) !important;
 }
+.nav.active .hamburger {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+}
 .nav.active .hamburger--spring .hamburger-inner {
   transition-delay: 0.22s;
   background-color: transparent !important;
@@ -1233,6 +1238,81 @@ table {
   padding-top: 12rem;
   padding-bottom: 8rem;
 }
+.header .video__box {
+  position: relative;
+}
+.header .video__box .play__btn-box {
+  position: absolute;
+  top: calc(50% + 5rem);
+  left: calc(50% - 3rem);
+  width: 6rem;
+  height: 6rem;
+}
+@media only screen and (max-width: 35.9375em) {
+  .header .video__box .play__btn-box {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.header .video__box .play__btn-box .play__btn {
+  position: relative;
+  cursor: pointer;
+}
+.header .video__box .play__btn-box .play__btn .pause-btn,
+.header .video__box .play__btn-box .play__btn .play-btn {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.3s;
+}
+.header .video__box .play__btn-box .play__btn .pause-btn {
+  opacity: 0;
+}
+.header .video__box .play__btn-box .play__btn.playing .pause-btn {
+  opacity: 1;
+}
+.header .video__box .play__btn-box .play__btn.playing .play-btn {
+  opacity: 0;
+}
+.header .video__box .play__btn-box::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  background: #fff;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: sprey 2s linear infinite;
+  transform: translate(-50%, -50%) scale(1);
+}
+.header .video__box .play__btn-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  animation: sprey 2s linear infinite;
+  animation-delay: 0.2s;
+  transform: translate(-50%, -50%) scale(1);
+}
+@keyframes sprey {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
 
 .cta {
   padding-bottom: 14rem;
@@ -1245,6 +1325,9 @@ table {
   justify-content: center;
   padding: 3.5rem 2rem;
   gap: 3rem;
+}
+.cta__wrapper h2.heading {
+  font-size: clamp(2.5rem, 2.5vw, 3.2rem);
 }
 .cta__wrapper .btn {
   max-width: 270px;
@@ -1410,7 +1493,7 @@ table {
   user-select: none;
 }
 .course-content .chapter__title span {
-  color: #4d008c;
+  color: #7891fb;
   margin-right: 5px;
 }
 .course-content .chapter__title svg {
