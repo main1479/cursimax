@@ -18,6 +18,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -43,6 +44,7 @@ body {
 }
 
 .container {
+  overflow-x: hidden;
   max-width: 1300px;
 }
 
@@ -1092,15 +1094,16 @@ table {
   top: 0;
   left: 0;
   width: 100%;
-  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+  transition: all 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
   z-index: 5;
   background: #ffffff;
+  overflow-x: hidden;
 }
 .nav.sticky {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
   position: fixed;
   padding: 1rem 0;
-  transition: top 0.5s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
+  transition: all 0.5s cubic-bezier(0.33333, 0, 0.66667, 0.33333);
 }
 .nav__container {
   display: flex;
@@ -1183,11 +1186,6 @@ table {
 }
 .nav.active .nav__menu {
   transform: translateX(0) !important;
-}
-.nav.active .hamburger {
-  position: absolute;
-  top: 3rem;
-  right: 2rem;
 }
 .nav.active .hamburger--spring .hamburger-inner {
   transition-delay: 0.22s;
@@ -1451,10 +1449,16 @@ body.home .teachers-cta .top {
   padding: 10rem 0;
   padding-bottom: 15rem;
   background: #4d008c;
+  position: relative;
+  z-index: 0;
+}
+body.home .teachers-cta .bottom {
+  z-index: 1;
+  margin-top: -5rem;
+  position: relative;
 }
 body.home .teachers-cta .bottom .video__box {
   position: relative;
-  margin-top: -5rem;
   max-height: 500px;
 }
 body.home .teachers-cta .bottom .video__box video {
