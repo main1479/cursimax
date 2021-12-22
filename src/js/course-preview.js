@@ -163,3 +163,27 @@ chapters.forEach((chapter) => {
 		});
 	});
 });
+
+// =======================================
+// Video ELEMENTS
+// =======================================
+const playBtns = document.querySelectorAll('.play__btn');
+
+let playing = false;
+playBtns.forEach((btn) => {
+	btn.addEventListener('click', (e) => {
+		const videoId = btn.dataset.videoId;
+		console.log(videoId);
+		if (!videoId) return;
+		const videoEl = document.querySelector(videoId);
+		if (playing) {
+			videoEl.pause();
+			playing = false;
+			btn.classList.remove('playing');
+		} else {
+			videoEl.play();
+			playing = true;
+			btn.classList.add('playing');
+		}
+	});
+});

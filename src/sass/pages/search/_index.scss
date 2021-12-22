@@ -25,6 +25,7 @@ body.search {
 	// Header Section
 	// ======================================
 	.header {
+		padding-top: clamp(5rem, 8vw, 10rem);
 		&__img {
 			transform: translateX(20px);
 		}

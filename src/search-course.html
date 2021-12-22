@@ -383,7 +383,9 @@
 		<script src="js/main.js"></script>
 
 		<script>
-			AOS.init();
+			AOS.init({
+				once: true,
+			});
 			const containerEl = document.querySelector('.course__grid');
 			var mixer = mixitup(containerEl, {
 				selectors: {

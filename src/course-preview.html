@@ -14,7 +14,7 @@
 		<!-- ============== CSS FILES ============== -->
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="css/bootstrap.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/course-preview.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -83,15 +83,13 @@
 						</div>
 					</div>
 					<div class="col-lg-6 video__box" data-aos="fade-right" data-aos-duration="1000">
-						<img src="./img/video-bg.png" alt="Cursitos" class="img-fluid mt-4 mbl-land-hide" />
-						<img
-							src="./img/hero-img-mobile.png"
-							alt="Cursitos"
-							width="100%"
-							class="mbl-land-show mt-4 mx-auto"
-						/>
+						<video
+							id="coursePreview"
+							poster="./img/video-bg.png"
+							src="https://player.vimeo.com/external/377069687.sd.mp4?s=fcffa23955d984bc7107363a7fe01f115084c658&profile_id=139&oauth2_token_id=57447761"
+						></video>
 						<div class="play__btn-box">
-							<div class="play__btn" data-video-id="#teachersCta">
+							<div class="play__btn" data-video-id="#coursePreview">
 								<img class="play-btn" src="./img/play-btn.png" alt="play button" />
 								<img class="pause-btn" src="./img/pause-btn.png" alt="pause button" />
 							</div>
@@ -104,8 +102,8 @@
 					data-aos-duration="1000"
 					data-aos-delay="900"
 				>
-					<a href="#" class="btn btn__primary">Buy now</a>
-					<a href="#" class="btn btn__secondary">Study Plan</a>
+					<a href="#" class="btn btn__purple">Buy now</a>
+					<a href="#" class="btn btn__yellow">Study Plan</a>
 				</div>
 			</div>
 		</header>
@@ -526,9 +524,11 @@
 
 		<!-- Main js file -->
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="js/main.js"></script>
+		<script src="js/course-preview.js"></script>
 		<script>
-			AOS.init();
+			AOS.init({
+				once: true,
+			});
 		</script>
 	</body>
 </html>

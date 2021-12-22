@@ -1,4 +1,7 @@
 body.about {
+	.container {
+		overflow: hidden;
+	}
 	.floating__img {
 		position: absolute;
 		top: 13rem;
@@ -7,7 +10,7 @@ body.about {
 	}
 
 	.header {
-		padding-top: clamp(2rem, 8vw, 10rem);
+		padding-top: clamp(5rem, 8vw, 10rem);
 	}
 
 	// ==========================================

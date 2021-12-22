@@ -44,7 +44,6 @@ body {
 }
 
 .container {
-  overflow-x: hidden;
   max-width: 1300px;
 }
 
@@ -1280,6 +1279,7 @@ form.form .forget__link {
   padding: 4rem;
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 .footer .newsletter__form h3.heading {
   font-size: clamp(2.2rem, 2vw, 3rem);
@@ -1386,6 +1386,9 @@ form.form .forget__link {
   opacity: 0.7;
 }
 
+body.home .container {
+  overflow: hidden;
+}
 body.home h1.heading {
   font-size: clamp(3.5rem, 3vw, 5rem);
   color: #4d008c;
@@ -1621,6 +1624,9 @@ body.home section.discover .discover__grid-item {
     opacity: 0;
   }
 }
+body.about .container {
+  overflow: hidden;
+}
 body.about .floating__img {
   position: absolute;
   top: 13rem;
@@ -1628,7 +1634,7 @@ body.about .floating__img {
   z-index: -1;
 }
 body.about .header {
-  padding-top: clamp(2rem, 8vw, 10rem);
+  padding-top: clamp(5rem, 8vw, 10rem);
 }
 body.about h1.heading {
   font-size: clamp(2.5rem, 2.5vw, 3.4rem);
@@ -1720,6 +1726,9 @@ body.search h3.heading {
 }
 body.search p.p__text-small {
   font-size: 1.5rem;
+}
+body.search .header {
+  padding-top: clamp(5rem, 8vw, 10rem);
 }
 body.search .header__img {
   transform: translateX(20px);
